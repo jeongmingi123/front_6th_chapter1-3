@@ -17,8 +17,3 @@ export const useShallowSelector = <T, S = T>(selector: Selector<T, S>) => {
     return prevSelectedStateRef.current;
   };
 };
-
-// 기존의 간단한 버전 (하위 호환성을 위해 유지)
-export const useShallowSelectorSimple = <T, S = T>(selector: Selector<T, S>) => {
-  return (state: T): S => selector(state);
-};
