@@ -1,5 +1,6 @@
-import { type FunctionComponent, useRef, useMemo, createElement, type ReactElement } from "react";
+import { type FunctionComponent, createElement, type ReactElement } from "react";
 import { shallowEquals } from "../equals";
+import { useMemo, useRef } from "../hooks";
 
 export function memo<P extends object>(Component: FunctionComponent<P>, equals = shallowEquals) {
   const MemoizedComponent = (props: P) => {
